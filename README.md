@@ -30,7 +30,7 @@ This repository contains an SQL-based project for a Student Database Management 
 
 1. Clone the repository:
 
-    bash
+    
     git clone https://github.com/yourusername/StudentDatabaseManagementSystem.git
     cd StudentDatabaseManagementSystem
     
@@ -53,7 +53,7 @@ Some example SQL queries included in the project:
 
 - Display all students enrolled in a particular course:
 
-    sql
+    
     SELECT s.student_id, s.student_name
     FROM students s
     JOIN enrollments e ON s.student_id = e.student_id
@@ -62,7 +62,7 @@ Some example SQL queries included in the project:
 
 - Calculate the average grade for a course:
 
-    sql
+    
     SELECT course_id, AVG(grade) AS average_grade
     FROM enrollments
     WHERE course_id = 'COURSE_ID'
