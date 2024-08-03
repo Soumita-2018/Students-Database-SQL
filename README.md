@@ -30,7 +30,7 @@ This repository contains an SQL-based project for a Student Database Management 
 
 1. Clone the repository:
 
-    
+    bash
     git clone [https://github.com/yourusername/StudentDatabaseManagementSystem](https://github.com/Soumita-2018/Students-Database-SQL).git
     cd Student-Database-SQL
     
