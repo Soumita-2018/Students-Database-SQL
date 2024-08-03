@@ -1,84 +1,103 @@
-# Car Selling web application using Flask and SQLite database
 
-This is a simple CRUD web application for managing car sales, built using Flask and SQLite.
 
-## Overview
+# 🎓 Student Database Management System
 
-The CarSales web application allows users to:
+This repository houses an SQL-based project for managing student databases. The system efficiently handles relationships between students, courses, enrollments, and grades, with a variety of SQL queries included for seamless data management.
 
-- *View a list of cars*: Display available cars with details such as ID, Name, Year, and Price.
-- *Add a new car*: Provide details to add a new car to the list.
-- *Update an existing car*: Modify details of an existing car.
-- *Delete a car*: Remove a car from the list.
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Setup](#setup)
+- [Usage](#usage)
+- [SQL Queries](#sql-queries)
+- [ER Diagram](#er-diagram)
+- [Screenshots](#screenshots)
 
 ## Features
 
-- Simple and intuitive interface for managing car sales
-- CRUD operations (Create, Read, Update, Delete) for car records
-- Persistent storage using SQLite database
+- 📚 Manage relationships between students, courses, enrollments, and grades
+- 💻 Execution of multiple SQL queries for efficient data manipulation
+- 📊 Comprehensive project report with ER diagram, constraints, keys, relationships, and metadata
 
 ## Technologies Used
 
-- *Flask*: A lightweight web framework for Python
-- *SQLite*: A lightweight database engine for storing car details
+- SQL
+- Relational Database Management System (RDBMS)
 
+## Project Structure
+
+```
+Student-Database-SQL/
+├── sql/
+│   ├── create_tables.sql
+│   ├── insert_data.sql
+│   └── queries.sql
+├── resources/
+│   └── Project_Report.pdf
+├── screenshots/
+│   └── query_execution.png
+└── README.md
+```
 
 ## Setup
 
-1. *Clone the repository:*
+1. **Clone the repository:**
 
-    bash
-    git clone https://github.com/yourusername/CarSales.git
-    cd CarSales
-    
+    ```bash
+    git clone https://github.com/Soumita-2018/Students-Database-SQL.git
+    cd Student-Database-SQL
+    ```
 
-2. *Install the required Python packages:*
+2. **Ensure that an RDBMS (e.g., MySQL, PostgreSQL) is installed and running on your machine.**
 
-    bash
-    pip install -r requirements.txt
-    
+3. **Create the necessary database and run the SQL scripts in the `sql` directory in the following order:**
 
-3. *Initialize the database:*
-
-    The database file (database.db) will be created automatically when you run the application for the first time.
-
-4. *Run the application:*
-
-    bash
-    python app.py
-    
-
-5. *Open your web browser and navigate to:*
-
-    
-    http://127.0.0.1:5000
-    
+    - `create_tables.sql`
+    - `insert_data.sql`
 
 ## Usage
 
-- *View Cars*: Navigate to the main page to see a list of available cars.
-- *Add Car*: Click on the "Add Car" link to add a new car to the list.
-- *Update Car*: Click on the "Update" button next to a car to modify its details.
-- *Delete Car*: Click on the "Delete" button next to a car to remove it from the list.
+1. Open your preferred SQL client and connect to your database.
+
+2. Execute the queries in the `queries.sql` file to interact with the student database management system.
+
+## SQL Queries
+
+Here are some example SQL queries included in the project:
+
+- **Display all students enrolled in a particular course:**
+
+    ```sql
+    SELECT s.student_id, s.student_name
+    FROM students s
+    JOIN enrollments e ON s.student_id = e.student_id
+    WHERE e.course_id = 'COURSE_ID';
+    ```
+
+- **Calculate the average grade for a course:**
+
+    ```sql
+    SELECT course_id, AVG(grade) AS average_grade
+    FROM enrollments
+    WHERE course_id = 'COURSE_ID'
+    GROUP BY course_id;
+    ```
+
+- Other queries for retrieving and manipulating data related to students, courses, enrollments, and grades.
+
+## ER Diagram
+
+The ER Diagram, including constraints, keys, relationships, and metadata, is detailed in the project report (Project_Report.pdf) located in the resources directory.
+
+![ER Diagram](resources/ER_Diagram.png)
 
 ## Screenshots
 
-### Home Page
+### Example Query Execution
 
-![Home Page](https://github.com/user-attachments/assets/3dd9cd44-d9b7-4a5d-8007-e7d821267a99)
-
-### Add Car
-
-![Add Car](https://github.com/user-attachments/assets/7d7e615c-a800-40a0-844e-79958df43803)
-![Add Car](https://github.com/user-attachments/assets/a81f41d9-4c81-43ef-91f1-f270e59f2b7d)
-
-### Update Car
-
-![Update Car](https://github.com/user-attachments/assets/20e6407e-a39f-4f10-98c2-b006ac5aea7e)
-
-### Delete Car
-
-![Update Car](https://github.com/user-attachments/assets/c8c3d1b9-4982-4bcc-9067-d3169cdd94a9)
+![Query Execution](screenshots/query_execution.png)
 
 ---
 
@@ -86,4 +105,4 @@ Feel free to contribute to the project by forking the repository and submitting 
 
 ---
 
-Happy Car Sales Management!
+Happy Querying! 🚀
