@@ -31,7 +31,7 @@ This repository contains an SQL-based project for a Student Database Management 
 1. Clone the repository:
 
     
-    https://github.com/yourusername/StudentDatabaseManagementSystem.git
+    git clone https://github.com/yourusername/StudentDatabaseManagementSystem.git
     cd StudentDatabaseManagementSystem
     
 
