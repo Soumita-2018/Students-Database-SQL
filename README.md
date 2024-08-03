@@ -31,8 +31,8 @@ This repository contains an SQL-based project for a Student Database Management 
 1. Clone the repository:
 
     
-    git clone https://github.com/yourusername/StudentDatabaseManagementSystem.git
-    cd StudentDatabaseManagementSystem
+    git clone [https://github.com/yourusername/StudentDatabaseManagementSystem](https://github.com/Soumita-2018/Students-Database-SQL).git
+    cd Student-Database-SQL
     
 
 2. Ensure that an RDBMS (e.g., MySQL, PostgreSQL) is installed and running on your machine.
